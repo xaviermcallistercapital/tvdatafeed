@@ -78,13 +78,7 @@ class TvDatafeed:
         if not os.path.exists(self.path):
             os.mkdir(self.path)
             if self.chromedriver_path is None:
-                if (
-                    input(
-                        "\n\ndo you want to install chromedriver automatically?? y/n\t"
-                    ).lower()
-                    == "y"
-                ):
-                    self.__install_chromedriver()
+                self.__install_chromedriver()
 
             else:
                 self.__save_token(token=None)
