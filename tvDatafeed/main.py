@@ -263,7 +263,7 @@ class TvDatafeed:
                 time.sleep(5)
 
             driver = webdriver.Chrome(
-                self.chromedriver_path, desired_capabilities=caps, options=options
+                self.chromedriver_path, options=options #desired_capabilities=caps, 
             )
 
             logger.debug("opening https://in.tradingview.com ")
